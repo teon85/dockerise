@@ -1,0 +1,2 @@
+# dockerise
+pense bete docker
