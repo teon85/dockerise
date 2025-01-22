@@ -26,7 +26,8 @@ RUN apt-get update && apt-get -y upgrade; \
         rm -rf /var/tmp/*; \
         rm -rf /usr/share/doc/; \
         rm -rf /usr/share/man/; \
-        rm -rf $HOME/.cache;
+        rm -rf $HOME/.cache; \
+        touch /var/log/lastlog;
 
 # sshd
 RUN mkdir /var/run/sshd; \
