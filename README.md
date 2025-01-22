@@ -25,7 +25,7 @@ Construire l'image avec le Dockerfile.
 * . stipule le dockerfile dans le même dossier
 * -t tag de l'image
 
-## Creation du container create
+## Creation du container avec create
 Création du container depuis l'image
 `docker container create -i -t --expose 22 -h debssh --name debian-ssh debian-openssh `
 * --dns		impose le serveur dns
@@ -39,15 +39,30 @@ Création du container depuis l'image
 * --ip6		IPv6 address (e.g., 2001:db8::33)
 * --network		Connect a container to a network
 * --network-alias		Add network-scoped alias for the container
-* -t, --tty		Allocate a pseudo-TTY
+* -t, --tty		affecte un pseudo TTY
 
-## Creation du container run
+## Creation du container avec run
 Creation et execute le container avec mappage des ports
-`docker run -d --name debian-ssh -p 8022:22 debian-openssh`
+`docker run -it -d --name debian-ssh -p 8022:22 debian-openssh`
+* -it shell intéractif
 * -d detache le container
 * -name nome le container
 * -p 8022:22  mappe le localhost:8022 vers le 22 du container
 * nom de l'image
+* --rm
+* --dns		impose le serveur dns
+* --dns-option		options dns
+* --dns-search		le domaine search
+* --domainname		nom du domaine de la machine
+* -i, --interactive		garde un STDIN ouvert
+* -h, --hostname		nom du container
+* --ip		IPv4 address (e.g., 172.30.100.104)
+* --ip6		IPv6 address (e.g., 2001:db8::33)
+* --network		Connecter vers un reseau
+* --network-alias		Add network-scoped alias for the container
+* -t, --tty		Affecte un pseudo TTY
+* -p, --publish	Plublie un port expose
+* -P, --publish-all	plublie tous les port vers des port aléatoire.
 
 # Docker-desktop
 L'interface permet entre autre :
