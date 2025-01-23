@@ -72,3 +72,11 @@ L'interface permet entre autre :
 * etc ...
   
 ![Docker-desktop](https://github.com/teon85/dockerise/blob/main/docker-desktop.png)
+
+# Wireshark
+![Docker-desktop](https://github.com/teon85/dockerise/blob/main/WS_link.png)
+Depuis le menu ssh remplir les champs d'option pour le localhost et son port,
+Remplir les champs de l'utilisateur lambda
+Finir par les options ( vu la config de l'image il n'y a pas de mot de passe pour lambda/tcpdump )
+![Docker-desktop](https://github.com/teon85/dockerise/blob/main/WS_options.png)
+
