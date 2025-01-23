@@ -7,7 +7,7 @@ L'installation d'outils basique pour la gestion et sur l'utilisation du reseaux 
 Le fichier est édité avec VScode et le module docker.
 * Utilisation de la debian latest
 * Mise a jour de la distribution
-* Installation des outils : sudo htop mc bash sed tzdata
+* Installation des outils : sudo htop mc bash sed tzdata tcpdump
 * Installation des outils reseaux : iputils-ping iproute2 traceroute dnsutils iperf
 * Installation des services : openssh-server
 * Nettoyage des fichiers inutiles pour "asseptiser" l'image
