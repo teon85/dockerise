@@ -13,7 +13,7 @@ RUN apt-get update && apt-get -y upgrade; \
         # Tools
         apt-get install -y sudo htop mc bash sed tzdata; \
         # Net utils
-        apt-get install -y iputils-ping iproute2 traceroute dnsutils iperf; \
+        apt-get install -y iputils-ping iproute2 traceroute dnsutils iperf tcpdump; \
         # extra packages
         apt-get install -y openssh-server; \
         # Cleaning
@@ -35,7 +35,7 @@ RUN mkdir /var/run/sshd; \
     sed -i 's/^\(UsePAM yes\)/# \1/' /etc/ssh/sshd_config; 
 
 # Add user
-RUN useradd -m $USERNAME && echo "$USERNAME:$USERNAME" | chpasswd && adduser $USERNAME sudo
+RUN useradd -m $USERNAME && echo "$USERNAME:$USERNAME" | chpasswd && adduser $USERNAME sudo && adduser $USERNAME tcpdump && echo "lambda ALL = NOPASSWD: /usr/bin/tcpdump" >> /etc/sudoers
 
 # entrypoint
 RUN { \
