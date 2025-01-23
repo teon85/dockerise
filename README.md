@@ -43,7 +43,7 @@ Création du container depuis l'image
 
 ## Creation du container avec run
 Creation et execute le container avec mappage des ports
-`docker run -it -d --name debian-ssh -p 8022:22 debian-openssh`
+`docker run -it -d --name debian-ssh --network bridge -p 8022:22 debian-openssh`
 * -it shell intéractif
 * -d detache le container
 * -name nome le container
